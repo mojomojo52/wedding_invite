@@ -385,7 +385,8 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  /*background: rgba(0, 0, 0, 0.4);*/
+  background: rgba(255, 255, 255, 0.4);
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter,
@@ -906,7 +907,8 @@ form label {
 #fh5co-counter .counter-label {
   margin-bottom: 0;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  /*color: rgba(255, 255, 255, 0.5);*/
+  color: rgba(10, 10, 10, 0.5);
   letter-spacing: .1em;
 }
 @media screen and (max-width: 768px) {
@@ -942,7 +944,7 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
+  background: rgba(241, 78, 149, 0.5);
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -980,6 +982,7 @@ form label {
 
 .simply-countdown > .simply-section .simply-amount {
   font-size: 30px;
+  text-decoration: underline;
   /* amounts */
 }
 
