@@ -149,7 +149,7 @@
 			margin: 10,
 			responsiveClass: true,
 			nav: false,
-			dots: true,
+			dots: false,
 			smartSpeed: 800,
 			autoHeight: true,
 		});
