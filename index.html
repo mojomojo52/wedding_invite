@@ -65,37 +65,60 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-		<script src="js/respond.min.js"></script>
-		<![endif]-->
+	<style>
+	.gallery {
+}
 
-		<style>
-			.skin_gallery {
+    .gallery .area {
+        padding: 3% 3%;
+    }
+
+.gallery_grid {
     overflow: hidden;
 }
 
-    .skin_gallery figure {
+    .gallery_grid figure {
         float: left;
         width: 33.33%;
         box-sizing: border-box;
         padding: 7px;
     }
 
-        .skin_gallery figure a {
+        .gallery_grid figure a {
             background-size: cover !important;
             cursor: default;
             display: block;
         }
 
-        .skin_gallery figure .img_frame {
+        .gallery_grid figure .img_frame {
             width: 100%;
             vertical-align: top;
         }
+    .gallery_grid figure2 {
+        float: left;
+        width: 66.66%;
+        box-sizing: border-box;
+        padding: 7px;
+    }
 
-		</style>
+        .gallery_grid figure2 a {
+            background-size: cover !important;
+            cursor: default;
+            display: block;
+        }
+
+        .gallery_grid figure2 .img_frame {
+            width: 100%;
+            vertical-align: top;
+        }
+	</style>
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
@@ -142,7 +165,7 @@
 						<ul>
 							<li class="active"><a href="index.html">Home</a></li>
 							<li><a href="#fh5co-couple">안녕하세요</a></li>
-							<li><a href="#fh5co-couple-story">저희 이야기</a></li>
+							<!--<li><a href="#fh5co-couple-story">저희 이야기</a></li>-->
 							<li><a href="#fh5co-gallery">사진첩</a></li>
 							<li><a href="#fh5co-testimonial">오시는 길</a></li>
 						</ul>
@@ -187,7 +210,7 @@
 						</div>
 						<div class="desc-groom">
 							<h3>강인갑</h3>
-							<p>최고다잉</p>
+							<p>어떤 일이 있더라도 서로에게 힘을 주며 같이 나아갈 수 있는 인연을 만났습니다. 저희 결혼식에 참석해주셔서 새로운 출발을 축하해 주시면 감사하겠습니다!</p>
 						</div>
 					</div>
 					<p class="heart text-center"><i class="icon-heart2"></i></p>
@@ -204,95 +227,59 @@
 			</div>
 		</div>
 
-
-		<div id="fh5co-couple-story">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-						<span></span>
-						<h2>Invitation</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0">
-						<ul class="timeline animate-box">
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">First We Meet</h3>
-										<span class="date">December 25, 2015</span>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">First Date</h3>
-										<span class="date">December 28, 2015</span>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
-									</div>
-								</div>
-							</li>
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">In A Relationship</h3>
-										<span class="date">May 20, 2017</span>
-									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
 		
-		<div id="fh5co-gallery" class="fh5co-section-gray">
+		<div id="fh5co-gallery" class="">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 				<span>사진첩</span>
 				<h2>Wedding Gallery</h2>
-				<div class="row">
-				<div id="demo-test-gallery" class="demo-gallery" data-pswp-uid="1">
-		
+				<div id="gallery" class="gallery">
+				<div id="demo-test-gallery" class="gallery_grid" data-pswp-uid="1">
 					<figure>
-						<a href="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg" data-size="800x800"
-							data-med="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg" data-med-size="11"
-						>
-							<img src="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg" alt="" />
-						</a>
+					<a href="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29-square.jpg" class="img_frame">
+					</a>
 					</figure>
-		
 					<figure>
-						<a href="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" data-size="800x800"
-							data-med="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" data-med-size="200x200"
-						>
-							<img src="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" alt="" />
-						</a>
+					<a href="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39-square.jpg" class="img_frame">
+					</a>
 					</figure>
-		
-		
+					<figure>
+					<a href="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24-square.jpg" class="img_frame">
+					</a>
+					</figure>
+					<figure>
+					<a href="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49.jpg" data-size="800x800">
+						<img src="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49-square.jpg" class="img_frame">
+					</a>
+					</figure>
+				</div>
 				</div>
 				</div>
 			</div>
@@ -337,6 +324,42 @@
 				</div>
 			</div>
 		</div>
+
+		<div id="fh5co-couple-story">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+						<span></span>
+						<h2>Numbers</h2>
+					</div>
+				</div>
+						
+				<div class="column">
+				<button class="text-center animate-box" onclick="HideFunction('GroomNUM')">
+				<p>신랑측 계좌번호</p>
+				</button>
+				<div id="GroomNUM" style="display: none;">
+					<div class="display-tc animate-box" data-animate-effect="fadeIn">
+					강인갑: 국민은행 93003459057
+					</div>
+				</div>
+				</div>
+				<div class="column">
+				<button class="text-center animate-box" onclick="HideFunction('BrideNUM')">
+				<p>신부측 계좌번호</p>
+				</button>
+				<div id="BrideNUM" style="display: none;">
+					<div class="display-tc animate-box" data-animate-effect="fadeIn">
+					강인갑: 국민은행 93003459057
+					</div>
+				</div>
+				</div>
+
+
+				</div>
+			</div>
+		</div>
+
 		
 		
 		<div class="gototop js-top">
@@ -434,7 +457,7 @@
 								src: el.getAttribute('href'),
 								w: parseInt(size[0], 10),
 								h: parseInt(size[1], 10),
-								author: el.getAttribute('data-author')
+								//author: el.getAttribute('data-author')
 							};
 
 							item.el = el; // save link to element for getThumbBoundsFn
@@ -573,7 +596,7 @@
 									captionEl.children[0].innerText = '';
 									return false;
 								}
-								captionEl.children[0].innerHTML = item.title + '<br/><small>Photo: ' + item.author + '</small>';
+								//captionEl.children[0].innerHTML = item.title + '<br/><small>Photo: ' + item.author + '</small>';
 								return true;
 							},
 
@@ -697,7 +720,8 @@
 					}
 				};
 
-				initPhotoSwipeFromDOM('.demo-gallery');
+				//initPhotoSwipeFromDOM('.demo-gallery');
+				initPhotoSwipeFromDOM('.gallery_grid');
 
 			})();
 
@@ -750,6 +774,17 @@
 				day: d.getDate(),
 				enableUtc: false
 			});
+		</script>
+
+		<script>
+		function HideFunction(ID) {
+		  var x = document.getElementById(ID);
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
 		</script>
 		
 		</body>
