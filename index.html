@@ -66,51 +66,25 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<style>
-	.gallery {
-}
+		.photo_matrix {
+			overflow: hidden;
+			padding: 3% 3%;
+		}
 
-    .gallery .area {
-        padding: 3% 3%;
-    }
+		.photo_matrix a {
+			float: left;
+			width: 33.33%;
+			box-sizing: border-box;
+			padding: 7px;
+			background-size: cover !important;
+			cursor: default;
+			display: block;
+		}
 
-.gallery_grid {
-    overflow: hidden;
-}
-
-    .gallery_grid figure {
-        float: left;
-        width: 33.33%;
-        box-sizing: border-box;
-        padding: 7px;
-    }
-
-        .gallery_grid figure a {
-            background-size: cover !important;
-            cursor: default;
-            display: block;
-        }
-
-        .gallery_grid figure .img_frame {
-            width: 100%;
-            vertical-align: top;
-        }
-    .gallery_grid figure2 {
-        float: left;
-        width: 66.66%;
-        box-sizing: border-box;
-        padding: 7px;
-    }
-
-        .gallery_grid figure2 a {
-            background-size: cover !important;
-            cursor: default;
-            display: block;
-        }
-
-        .gallery_grid figure2 .img_frame {
-            width: 100%;
-            vertical-align: top;
-        }
+		.photo_matrix a .box {
+			width: 100%;
+			vertical-align: top;
+		}
 	</style>
 
 	<!-- Modernizr JS -->
@@ -206,7 +180,7 @@
 				<div class="couple-wrap animate-box">
 					<div class="couple-half">
 						<div class="groom">
-							<img src="images/groom.jpg" alt="groom" class="img-responsive">
+							<img src="images/groom2.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-groom">
 							<h3>강인갑</h3>
@@ -216,73 +190,69 @@
 					<p class="heart text-center"><i class="icon-heart2"></i></p>
 					<div class="couple-half">
 						<div class="bride">
-							<img src="images/bride.jpg" alt="groom" class="img-responsive">
+							<img src="images/bride2.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-bride">
 							<h3>최유진</h3>
-							<p>멋지다잉</p>
+							<p>
+								서로를 바라보면 그저 행복하고 함께하는 미래가 기대됩니다.
+								사랑하는 마음으로 감사하며 즐겁게 살아가겠습니다.
+								축하해주셔서 감사합니다!
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		
+
 		<div id="fh5co-gallery" class="">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 				<span>사진첩</span>
 				<h2>Wedding Gallery</h2>
-				<div id="gallery" class="gallery">
-				<div id="demo-test-gallery" class="gallery_grid" data-pswp-uid="1">
-					<figure>
-					<a href="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24-square.jpg" class="img_frame">
-					</a>
-					</figure>
-					<figure>
-					<a href="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49.jpg" data-size="800x800">
-						<img src="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49-square.jpg" class="img_frame">
-					</a>
-					</figure>
-				</div>
-				</div>
+				<div id="photo_gall_n_matrix" class="photo_matrix photo_gall" data-pswp-uid="1">
+						<a href="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29.jpg" data-size="512x768"
+							data-med="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29.jpg" data-med-size="512x768"
+							data-author="">
+							<img src="images/weddiing_photos/IMG_4694 2022-03-20 20_36_29-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39.jpg"
+							data-size="2133x3200">
+							<img src="images/weddiing_photos/IMG_0107-2_Original 2022-03-20 20_36_39-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54.jpg" data-size="2086x3129">
+							<img src="images/weddiing_photos/IMG_4672 2022-03-20 20_35_54-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59.jpg" data-size="2130x3195">
+							<img src="images/weddiing_photos/IMG_4675 2022-03-20 20_35_59-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09.jpg" data-size="2182x3273">
+							<img src="images/weddiing_photos/IMG_4678 2022-03-20 20_36_09-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44.jpg" data-size="1152x768">
+							<img src="images/weddiing_photos/IMG_4680 2022-03-20 20_36_44-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19.jpg" data-size="2240x3360">
+							<img src="images/weddiing_photos/IMG_4686 2022-03-20 20_36_19-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24.jpg" data-size="2096x3144">
+							<img src="images/weddiing_photos/IMG_4687 2022-03-20 20_36_24-square.jpg"
+								class="box animate-box">
+						</a>
+						<a href="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49.jpg" data-size="1632x2226">
+							<img src="images/weddiing_photos/IMG_4999 2022-03-20 20_36_49-square.jpg"
+								class="box animate-box">
+						</a>
 				</div>
 			</div>
+
 		</div>
 		
 		<div id="fh5co-testimonial">
@@ -324,7 +294,7 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div id="fh5co-couple-story">
 			<div class="container">
 				<div class="row">
@@ -333,33 +303,33 @@
 						<h2>Numbers</h2>
 					</div>
 				</div>
-						
+		
 				<div class="column">
-				<button class="text-center animate-box" onclick="HideFunction('GroomNUM')">
-				<p>신랑측 계좌번호</p>
-				</button>
-				<div id="GroomNUM" style="display: none;">
-					<div class="display-tc animate-box" data-animate-effect="fadeIn">
-					강인갑: 국민은행 93003459057
+					<button class="text-center animate-box" onclick="HideFunction('GroomNUM')">
+						<p>신랑측 계좌번호</p>
+					</button>
+					<div id="GroomNUM" style="display: none;">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							강인갑: 국민은행 93003459057
+						</div>
 					</div>
 				</div>
-				</div>
 				<div class="column">
-				<button class="text-center animate-box" onclick="HideFunction('BrideNUM')">
-				<p>신부측 계좌번호</p>
-				</button>
-				<div id="BrideNUM" style="display: none;">
-					<div class="display-tc animate-box" data-animate-effect="fadeIn">
-					강인갑: 국민은행 93003459057
+					<button class="text-center animate-box" onclick="HideFunction('BrideNUM')">
+						<p>신부측 계좌번호</p>
+					</button>
+					<div id="BrideNUM" style="display: none;">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							강인갑: 국민은행 93003459057
+						</div>
 					</div>
 				</div>
-				</div>
-
-
-				</div>
+		
+		
 			</div>
 		</div>
-
+		</div>
+		
 		
 		
 		<div class="gototop js-top">
@@ -386,13 +356,13 @@
 		
 						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 						<!--
-					
-									<button class="pswp__button pswp__button--share" title="Share" hidden></button>
-					
-									<button class="pswp__button pswp__button--fs" title="Toggle fullscreen" hidden></button>
-					
-									<button class="pswp__button pswp__button--zoom" title="Zoom in/out" hidden></button>
-									-->
+							
+											<button class="pswp__button pswp__button--share" title="Share" hidden></button>
+							
+											<button class="pswp__button pswp__button--fs" title="Toggle fullscreen" hidden></button>
+							
+											<button class="pswp__button pswp__button--zoom" title="Zoom in/out" hidden></button>
+											-->
 		
 						<div class="pswp__preloader">
 							<div class="pswp__preloader__icn">
@@ -457,7 +427,7 @@
 								src: el.getAttribute('href'),
 								w: parseInt(size[0], 10),
 								h: parseInt(size[1], 10),
-								//author: el.getAttribute('data-author')
+								author: el.getAttribute('data-author')
 							};
 
 							item.el = el; // save link to element for getThumbBoundsFn
@@ -721,7 +691,7 @@
 				};
 
 				//initPhotoSwipeFromDOM('.demo-gallery');
-				initPhotoSwipeFromDOM('.gallery_grid');
+				initPhotoSwipeFromDOM('.photo_gall');
 
 			})();
 
@@ -775,16 +745,16 @@
 				enableUtc: false
 			});
 		</script>
-
+		
 		<script>
-		function HideFunction(ID) {
-		  var x = document.getElementById(ID);
-		  if (x.style.display === "none") {
-		    x.style.display = "block";
-		  } else {
-		    x.style.display = "none";
-		  }
-		}
+			function HideFunction(ID) {
+				var x = document.getElementById(ID);
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
 		</script>
 		
 		</body>
