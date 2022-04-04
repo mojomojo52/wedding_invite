@@ -65,6 +65,7 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+
 	<style>
 		.photo_matrix {
 			overflow: hidden;
@@ -92,6 +93,70 @@
 			  border: none;
 			  text-decoration: underline;
 		}
+	</style>
+
+	<style>
+		/* Popup box BEGIN */
+	.hover_bkgr_fricc{
+	    /*background:rgba(0,0,0,.4);*/
+	    background:rgba(0,0,0,.4);
+	    cursor:pointer;
+	    display:none;
+	    height:100%;
+	    position:fixed;
+	    text-align:center;
+	    top:0;
+	    width:100%;
+	    z-index:10000;
+	}
+	.hover_bkgr_fricc .helper{
+	    display:inline-block;
+	    height:100%;
+	    vertical-align:middle;
+	}
+	.hover_bkgr_fricc > div {
+	    /*background-color: #fff;*/
+	    /*box-shadow: 10px 10px 60px #555;*/
+	    background-color: #fff;
+	    box-shadow: 10px 10px 60px #555;
+	    display: inline-block;
+	    height: auto;
+	    max-width: 551px;
+	    min-height: 100px;
+	    vertical-align: middle;
+	    width: 90%;
+	    position: relative;
+	    border-radius: 8px;
+	    padding: 15px 5%;
+	}
+	.popupCloseButton {
+	    background-color: #fff;
+	    border: 3px solid #999;
+	    border-radius: 50px;
+	    cursor: pointer;
+	    display: inline-block;
+	    font-family: arial;
+	    font-weight: bold;
+	    position: absolute;
+	    top: -20px;
+	    right: -20px;
+	    font-size: 25px;
+	    line-height: 30px;
+	    width: 30px;
+	    height: 30px;
+	    text-align: center;
+	}
+	.popupCloseButton:hover {
+	    background-color: #ccc;
+	}
+	.trigger_popup_fricc {
+	    cursor: pointer;
+	    font-size: 20px;
+	    margin: 20px;
+	    display: inline-block;
+	    font-weight: bold;
+	}
+/* Popup box BEGIN */
 	</style>
 
 	<!-- Modernizr JS -->
@@ -298,7 +363,7 @@
 
 									<input type="text" value="서울특별시 관악구 관악로1 서울대학교 내 65동 교수회관" id="venue_addr"
 										style="display:none;">
-									<button onclick="Copytext('venue_addr')">주소 복사하기</button>
+									<button onclick="Copytext('venue_addr')" class="fancybutton">주소 복사하기</button>
 									<div><br></div>
 									<iframe
 										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6333.823774182106!2d126.95202903004454!3d37.4628022852756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5fff70ae0ac3%3A0x162ec2cd55828aa7!2sSNU%20Faculty%20Club!5e0!3m2!1sen!2sus!4v1647988737616!5m2!1sen!2sus"
@@ -335,6 +400,33 @@
 			</div>
 		</div>
 
+		<div id="GroomNums" class="hover_bkgr_fricc">
+			<span  class="helper"></span>
+			<div>
+				<div class="popupCloseButton">&times;</div>
+				<input type="text" id="GroomDadNUM" value="국민은행 429501-01-139389 강석상"
+					style="display: none;">
+				<input type="text" id="GroomMomNUM" value="국민은행 519702-01-064422  남상이"
+					style="display: none;">
+				<input type="text" id="GroomNUM" value="국민은행 93003459057 강인갑" style="display: none;">
+					<p>국민은행 429501-01-139389 강석상 <button onclick="Copytext('GroomDadNUM')" class="fancybutton">복사하기</button></p>
+					<p>국민은행 519702-01-064422  남상이 <button onclick="Copytext('GroomMomNUM')" class="fancybutton">복사하기</button></p>
+					<p>국민은행 &nbsp; &nbsp; 93003459057 &nbsp; 강인갑 <button onclick="Copytext('GroomNUM')" class="fancybutton">복사하기</button></p> <br>
+			</div>
+		</div>
+
+		<div id="BrideNums" class="hover_bkgr_fricc">
+			<span  class="helper"></span>
+			<div>
+				<div class="popupCloseButton">&times;</div>
+				<input type="text" id="BrideParentNUM" value="하나은행 736-910001-73908 최광진" style="display: none;">
+				<input type="text" id="BrideNUM" value="토스뱅크 100006321083 최유진" style="display: none;">
+					<P>하나은행 736-910001-73908 최광진<button onclick="Copytext('BrideParentNUM')" class="fancybutton"
+						class="counter-label">복사하기</button></P>
+					<p>토스뱅크 &nbsp;&nbsp;  100006321083 &nbsp;&nbsp;  최유진 <button onclick="Copytext('BrideNUM')" class="fancybutton">복사하기</button></p>
+			</div>
+		</div>
+
 		<div id="fh5co-couple-story">
 			<div class="container">
 				<div class="row">
@@ -343,35 +435,14 @@
 						<h2>Numbers</h2>
 
 						<div class="column text-center">
-							<!--
-									<button onclick="HideFunction('GroomNUM')">
-									신랑측 계좌번호
-									</button> 
-									<div id="GroomNUM" style="display: none;">-->
-							<div class="testimony-slide active text-center">
-								<h3>신랑측 계좌번호</h3>
+							<div class="testimony-slide active text-center " onclick="OpenPop('GroomNums')">
+								<p><u>신랑측 계좌번호 보기</u></p>
 							</div>
-							<input type="text" id="GroomParentNUM" value="국민은행 429501-01-139389 강석상"
-								style="display: none;">
-							<input type="text" id="GroomNUM" value="국민은행 93003459057 강인갑" style="display: none;">
-								<p>국민은행 429501-01-139389 강석상 <button onclick="Copytext('GroomParentNUM')" class="fancybutton">계좌
-										복사하기</button></p>
-								<p>국민은행 &nbsp; &nbsp; 93003459057 &nbsp; 강인갑 <button onclick="Copytext('GroomNUM')" class="fancybutton">계좌
-										복사하기</button></p> <br>
+
 						</div>
-						<div class="column text-center">
-							<!--
-									<button class="" onclick="HideFunction('BrideNUM')">
-									신부측 계좌번호
-									</button>
-									<div id="BrideNUM" style="display: none;">-->
-								<h3>신부측 계좌번호</h3>
-							<input type="text" id="BrideParentNUM" value="하나은행 736-910001-73908 최광진" style="display: none;">
-							<input type="text" id="BrideNUM" value="토스뱅크 100006321083 최유진" style="display: none;">
-								<P>하나은행 736-910001-73908 최광진<button onclick="Copytext('BrideParentNUM')" class="fancybutton"
-									class="counter-label">계좌 복사하기</button></P>
-								<p>토스뱅크 &nbsp;&nbsp;  100006321083 &nbsp;&nbsp;  최유진 <button onclick="Copytext('BrideNUM')" class="fancybutton">계좌
-									복사하기</button></p>
+						<div class="column text-center" onclick="OpenPop('BrideNums')">
+								<p><u>신부측 계좌번호 보기</u></p>
+
 						</div>
 					</div>
 
@@ -748,6 +819,8 @@
 		})();
 
 	</script>
+	
+	
 
 
 	<!-- jQuery -->
@@ -825,6 +898,34 @@
 			/* Alert the copied text */
 			alert("복사되었습니다!");
 		}</script>
+
+	<script>
+		$(window).load(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+	});
+	</script>
+
+	<script>
+		function OpenPop(ID) {
+			var x = document.getElementById(ID);
+			x.style.display = "block"
+		}
+	</script>
+
+
+	<script>
+		function LoadPop(ID) {
+		var NumWin = document.getElementById(ID);
+	}
+	</script>
 
 </body>
 
