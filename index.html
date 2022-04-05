@@ -342,8 +342,20 @@
 					</a>
 				</div>
 			</div>
-
 		</div>
+
+		<div id="Directions" class="hover_bkgr_fricc">
+			<span  class="helper"></span>
+			<div>
+				<div class="popupCloseButton">&times;</div>
+					<p>
+						• 2호선 낙성대역 (4번출구)→GS주유소 끼고 좌회전 후 우회전→제과점 앞에서 마을버스2번→'노천강당' 또는 '기초과학공동기기원, 교수회관' 정류장에서 하차 <br>
+						• 2호선 서울대입구역 (3번출구)→5511버스→'기초과학공동기기원, 교수회관' 정류장에서 하차
+						
+					</p>
+			</div>
+		</div>
+
 
 		<div id="fh5co-testimonial">
 			<div class="container">
@@ -358,12 +370,17 @@
 						<div class="col-md-12 animate-box">
 							<div class="wrap-testimony">
 								<div class="text-center">
-									<p> 서울특별시 관악구 관악로1 <br>
-										서울대학교 내 65동 교수회관</p>
-
+									<p> 서울대학교 교수회관 <br>
+										TEL 02-3285-2115 <br>
+									 	서울특별시 관악구 관악로1 <br>
+										서울대학교 내 65동 교수회관 
+									</p>
 									<input type="text" value="서울특별시 관악구 관악로1 서울대학교 내 65동 교수회관" id="venue_addr"
 										style="display:none;">
-									<button onclick="Copytext('venue_addr')" class="fancybutton">주소 복사하기</button>
+									<button onclick="Copytext('venue_addr')" class="fancybutton">주소 복사하기</button> <br>
+								<div class="testimony-slide active text-center fancybutton" onclick="OpenPop('Directions')">
+								<p><u>대중교통</u></p>
+								</div>
 									<div><br></div>
 									<iframe
 										src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6333.823774182106!2d126.95202903004454!3d37.4628022852756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5fff70ae0ac3%3A0x162ec2cd55828aa7!2sSNU%20Faculty%20Club!5e0!3m2!1sen!2sus!4v1647988737616!5m2!1sen!2sus"
@@ -920,12 +937,6 @@
 		}
 	</script>
 
-
-	<script>
-		function LoadPop(ID) {
-		var NumWin = document.getElementById(ID);
-	}
-	</script>
 
 </body>
 
