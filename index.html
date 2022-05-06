@@ -926,13 +926,16 @@
 
 	<script>
 		/*var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);*/
-		var d = new Date(2022, 5, 7, 16, 30, 0);
+		var d = new Date(2022, 5, 8, 1, 30, 0);
 
 		// default example
 		simplyCountdown('.simply-countdown-one', {
 			year: d.getFullYear(),
 			month: d.getMonth(),
-			day: d.getDate()
+			day: d.getDate(),
+			hours: d.getHours(),
+			minutes: d.getMinutes(),
+
 		});
 
 		//jQuery example
@@ -940,6 +943,8 @@
 			year: d.getFullYear(),
 			month: d.getMonth() + 1,
 			day: d.getDate(),
+			hours: d.getHours(),
+			minutes: d.getMinutes(),
 			enableUtc: false
 		});
 	</script>
